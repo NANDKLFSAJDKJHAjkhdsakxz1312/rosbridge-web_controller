@@ -1,0 +1,11 @@
+<launch>
+
+  <!--打开银河机器人模型关节角topic发布节点 -->
+  <param name="robot_description" command="cat '$(find miracle)/urdf/miracle.urdf'" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  
+  <!--依据人体关节角topic，发布机器人状态TF到银河机器人 -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+  </node>
+
+</launch>

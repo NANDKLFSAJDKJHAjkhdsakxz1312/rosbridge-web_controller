@@ -1,0 +1,4 @@
+miracle
+/home/jn/workspace/code/ros_ws/devel/.private/miracle/lib/pkgconfig/miracle.pc /home/jn/workspace/code/ros_ws/devel/lib/pkgconfig/miracle.pc
+/home/jn/workspace/code/ros_ws/devel/.private/miracle/share/miracle/cmake/miracleConfig-version.cmake /home/jn/workspace/code/ros_ws/devel/share/miracle/cmake/miracleConfig-version.cmake
+/home/jn/workspace/code/ros_ws/devel/.private/miracle/share/miracle/cmake/miracleConfig.cmake /home/jn/workspace/code/ros_ws/devel/share/miracle/cmake/miracleConfig.cmake

@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="miracle">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0606 0.017021 0.12785"
+        rpy="0 0 0" />
+      <mass
+        value="17.276" />
+      <inertia
+        ixx="0.040792"
+        ixy="4.1423E-05"
+        ixz="8.1011E-05"
+        iyy="0.041082"
+        iyz="-0.00028759"
+        izz="0.038316" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59216 0.66667 0.68235 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leg_link1">
+    <inertial>
+      <origin
+        xyz="0.373410461941086 0.00317203238155983 0.00872400877544002"
+        rpy="0 0 0" />
+      <mass
+        value="22.0247976721526" />
+      <inertia
+        ixx="0.0754255607395009"
+        ixy="3.92959637740102E-05"
+        ixz="-0.000155769379066117"
+        iyy="0.319317431793346"
+        iyz="-0.000625399106227243"
+        izz="0.315210283487775" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_joint1"
+    type="revolute">
+    <origin
+      xyz="0.067499 0 0.136"
+      rpy="1.5708 -0.68983 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg_link2">
+    <inertial>
+      <origin
+        xyz="0.30543883910427 0.000587194720700124 -0.0340371176015127"
+        rpy="0 0 0" />
+      <mass
+        value="8.95607382191874" />
+      <inertia
+        ixx="0.0117400044567802"
+        ixy="-0.000628362265764557"
+        ixz="6.42351126552253E-06"
+        iyy="0.102142519439841"
+        iyz="1.29380270111411E-06"
+        izz="0.109117913938011" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_joint2"
+    type="revolute">
+    <origin
+      xyz="0.45 0 0"
+      rpy="-3.1416 0 1.9784" />
+    <parent
+      link="leg_link1" />
+    <child
+      link="leg_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg_link3">
+    <inertial>
+      <origin
+        xyz="0.000233497639811953 -0.0317006200287735 -0.000226107345642754"
+        rpy="0 0 0" />
+      <mass
+        value="2.74166971276735" />
+      <inertia
+        ixx="0.0131132101979025"
+        ixy="2.11295636664785E-05"
+        ixz="3.48307228512514E-08"
+        iyy="0.0116005108146718"
+        iyz="0.000187364414561459"
+        izz="0.0129055936481148" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_joint3"
+    type="revolute">
+    <origin
+      xyz="0.39 0 0"
+      rpy="3.1416 0 -0.4734" />
+    <parent
+      link="leg_link2" />
+    <child
+      link="leg_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="leg_link4">
+    <inertial>
+      <origin
+        xyz="-0.015153 -5.8636E-05 0.18105"
+        rpy="0 0 0" />
+      <mass
+        value="1.4044" />
+      <inertia
+        ixx="0.0058458"
+        ixy="6.1445E-06"
+        ixz="-5.6825E-06"
+        iyy="0.0045625"
+        iyz="4.2629E-06"
+        izz="0.0026933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/leg_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg_joint4"
+    type="revolute">
+    <origin
+      xyz="0 -0.1395 0"
+      rpy="1.5708 0.10031 0" />
+    <parent
+      link="leg_link3" />
+    <child
+      link="leg_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidra2_link">
+    <inertial>
+      <origin
+        xyz="-0.00019018 6.2925E-07 0.027552"
+        rpy="0 0 0" />
+      <mass
+        value="0.15063" />
+      <inertia
+        ixx="4.5255E-05"
+        ixy="-2.1506E-10"
+        ixz="1.6912E-08"
+        iyy="4.5069E-05"
+        iyz="-1.7116E-09"
+        izz="6.1719E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/lidra2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/lidra2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidra2_joint"
+    type="fixed">
+    <origin
+      xyz="0.0501 0 0.246"
+      rpy="1.5708 1.5645 1.5708" />
+    <parent
+      link="leg_link4" />
+    <child
+      link="lidra2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="head_mount_link">
+    <inertial>
+      <origin
+        xyz="1.738E-05 3.1615E-06 -0.0089392"
+        rpy="0 0 0" />
+      <mass
+        value="0.0067056" />
+      <inertia
+        ixx="1.8089E-06"
+        ixy="-2.0323E-13"
+        ixz="1.972E-13"
+        iyy="1.8089E-06"
+        iyz="2.3126E-13"
+        izz="3.3607E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_mount_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_mount_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.366"
+      rpy="0 0 0" />
+    <parent
+      link="leg_link4" />
+    <child
+      link="head_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="head_link1">
+    <inertial>
+      <origin
+        xyz="-1.21451846257781E-05 -0.0183691160814371 0.0139880463062609"
+        rpy="0 0 0" />
+      <mass
+        value="0.0179334054057747" />
+      <inertia
+        ixx="8.68704551396729E-06"
+        ixy="2.32867411072203E-13"
+        ixz="-9.8700049319966E-14"
+        iyy="8.27654965608288E-06"
+        iyz="-2.04020319007512E-06"
+        izz="6.42008283919176E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="head_mount_link" />
+    <child
+      link="head_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head_link2">
+    <inertial>
+      <origin
+        xyz="0.0844948741379612 -0.0804596463532488 0.0319526055216792"
+        rpy="0 0 0" />
+      <mass
+        value="1.31159529288958" />
+      <inertia
+        ixx="0.000798469616246155"
+        ixy="7.35786015458707E-06"
+        ixz="-1.0306933130501E-05"
+        iyy="0.000803801129309105"
+        iyz="-4.7675771129424E-06"
+        izz="0.000138174346221395" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/head_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.031 0.048"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="head_link1" />
+    <child
+      link="head_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.000103092898383172 -3.09936444287118E-08 -0.00775501666918563"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120043370449637" />
+      <inertia
+        ixx="9.35192695532425E-06"
+        ixy="1.04035705710706E-13"
+        ixz="1.98733290697677E-09"
+        iyy="9.28412817387126E-06"
+        iyz="-9.62614880749074E-13"
+        izz="1.83975367599659E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_mount_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_mount_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00025544 0.1295 0.273"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="leg_link4" />
+    <child
+      link="left_arm_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.00451320668760635 -4.84220839980232E-07 0.068453732902452"
+        rpy="0 0 0" />
+      <mass
+        value="0.164576053302054" />
+      <inertia
+        ixx="0.00035768230406796"
+        ixy="-4.33378549379354E-10"
+        ixz="-5.31763582039654E-06"
+        iyy="0.000313384891000046"
+        iyz="5.22511458440378E-10"
+        izz="0.000263231919003301" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.968627450980392 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.00025544 0 0.0215"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_mount_link" />
+    <child
+      link="left_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link2">
+    <inertial>
+      <origin
+        xyz="-1.32736194258243E-08 0.0729261615545976 -0.0242860265828597"
+        rpy="0 0 0" />
+      <mass
+        value="0.153610763556113" />
+      <inertia
+        ixx="0.000523400101333386"
+        ixy="9.63707927596802E-11"
+        ixz="-8.88098525786212E-11"
+        iyy="0.000181612212796772"
+        iyz="-0.000152838418381354"
+        izz="0.000482627255057858" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.051 0 0.083"
+      rpy="1.5708 0.0087535 -1.5708" />
+    <parent
+      link="left_arm_link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link3">
+    <inertial>
+      <origin
+        xyz="2.01632285201647E-07 0.00214120607233292 0.0947924947353457"
+        rpy="0 0 0" />
+      <mass
+        value="0.186587301067739" />
+      <inertia
+        ixx="0.000773698879079249"
+        ixy="-1.9261050013891E-10"
+        ixz="5.7469629059933E-10"
+        iyy="0.000790841800324136"
+        iyz="2.77127491977947E-05"
+        izz="0.000180064935294716" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0.1754 -0.051"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link4">
+    <inertial>
+      <origin
+        xyz="-3.59282905924019E-05 0.0462202717096162 -0.0211544021787333"
+        rpy="0 0 0" />
+      <mass
+        value="0.0802828063968529" />
+      <inertia
+        ixx="0.00016287611612671"
+        ixy="9.06993953713702E-08"
+        ixz="-3.8108714701397E-08"
+        iyy="7.56836891245293E-05"
+        iyz="-5.27088065070728E-05"
+        izz="0.000157942400170937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0 0.0461 0.175"
+      rpy="1.5708 -0.0014224 -3.1416" />
+    <parent
+      link="left_arm_link3" />
+    <child
+      link="left_arm_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link5">
+    <inertial>
+      <origin
+        xyz="-2.7270873337315E-09 0.00178441972763155 0.0724996930380202"
+        rpy="0 0 0" />
+      <mass
+        value="0.198915258543434" />
+      <inertia
+        ixx="0.000299393311774052"
+        ixy="-4.61118970352393E-11"
+        ixz="-6.65845091851043E-12"
+        iyy="0.000269443645755274"
+        iyz="-5.8116073433651E-07"
+        izz="0.000121358911581825" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0 0.126 -0.0461"
+      rpy="1.5708 0.003496 3.1416" />
+    <parent
+      link="left_arm_link4" />
+    <child
+      link="left_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link6">
+    <inertial>
+      <origin
+        xyz="0.0125246612969302 0.00690126387341727 0.0285485082750137"
+        rpy="0 0 0" />
+      <mass
+        value="0.0940462610721578" />
+      <inertia
+        ixx="6.05163698539327E-05"
+        ixy="6.46044058081461E-07"
+        ixz="-3.89165918177327E-09"
+        iyy="6.60362570287699E-05"
+        iyz="-8.00666734421871E-07"
+        izz="6.74459783980875E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.752941176470588 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0 0.035 0.158"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="left_arm_link5" />
+    <child
+      link="left_arm_link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm_link7">
+    <inertial>
+      <origin
+        xyz="-0.038731802471962 -9.91764670388307E-10 0.0186729913106849"
+        rpy="0 0 0" />
+      <mass
+        value="0.038847061584658" />
+      <inertia
+        ixx="3.84415402297172E-05"
+        ixy="1.15898509786435E-11"
+        ixz="-1.57377384631404E-05"
+        iyy="5.58653803458576E-05"
+        iyz="-1.30825443856742E-11"
+        izz="4.79748042655481E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="0.00012012 0.0345 0.035"
+      rpy="1.5708 0.0010493 -0.0034818" />
+    <parent
+      link="left_arm_link6" />
+    <child
+      link="left_arm_link7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_hand_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.597206763690074 -0.121051453967766 -0.914455490677455"
+        rpy="0 0 0" />
+      <mass
+        value="37.4986548939498" />
+      <inertia
+        ixx="1.73921601792546"
+        ixy="0.0365113558449346"
+        ixz="-0.0402410989125227"
+        iyy="3.39089693160912"
+        iyz="0.0916840266587484"
+        izz="3.5581985115674" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_hand_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/left_hand_mount_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_mount_joint"
+    type="fixed">
+    <origin
+      xyz="-0.05 0 0.0335"
+      rpy="0 1.5708 3.1416" /> <!--"0 1.5708 -3.0245"-->
+    <parent
+      link="left_arm_link7" />
+    <child
+      link="left_hand_mount_link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.000103092984707231 -3.07796441667563E-08 -0.00775501663634681"
+        rpy="0 0 0" />
+      <mass
+        value="0.0120043371384071" />
+      <inertia
+        ixx="9.35192696160257E-06"
+        ixy="1.006755150099E-13"
+        ixz="1.98732925185088E-09"
+        iyy="9.28412821128432E-06"
+        iyz="-9.52266254669673E-13"
+        izz="1.83975368002467E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_mount_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_mount_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00025544 -0.1295 0.273"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="leg_link4" />
+    <child
+      link="right_arm_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.00451319096291214 -6.17681515491242E-07 0.0684537977351237"
+        rpy="0 0 0" />
+      <mass
+        value="0.164575385797922" />
+      <inertia
+        ixx="0.000357682299311942"
+        ixy="-4.07284784893913E-10"
+        ixz="-5.3177371285037E-06"
+        iyy="0.000313384957106025"
+        iyz="5.25734307275388E-10"
+        izz="0.000263231940082954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.968627450980392 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.00025544 0 0.0215"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_mount_link" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link2">
+    <inertial>
+      <origin
+        xyz="1.64418449966064E-08 -0.0729261618625973 -0.0242860213771419"
+        rpy="0 0 0" />
+      <mass
+        value="0.153610761818557" />
+      <inertia
+        ixx="0.000523400125659722"
+        ixy="8.76557734845203E-11"
+        ixz="8.69720271142893E-11"
+        iyy="0.000181612185734675"
+        iyz="0.000152838390676076"
+        izz="0.000482627297245249" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.051 0 0.083"
+      rpy="-1.5708 -0.0087535 1.5708" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link3">
+    <inertial>
+      <origin
+        xyz="-1.8310729177351E-07 -0.00214122998062516 0.0947924894787023"
+        rpy="0 0 0" />
+      <mass
+        value="0.186587236035747" />
+      <inertia
+        ixx="0.000773698828581519"
+        ixy="-2.29777227693661E-10"
+        ixz="-5.27223762102277E-10"
+        iyy="0.000790841756686581"
+        iyz="-2.77127314416334E-05"
+        izz="0.000180064919813139" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.1754 -0.051"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link4">
+    <inertial>
+      <origin
+        xyz="3.59288799304247E-05 -0.0462202786634345 -0.0211543995626309"
+        rpy="0 0 0" />
+      <mass
+        value="0.0802827982292577" />
+      <inertia
+        ixx="0.000162876114417333"
+        ixy="9.06986488362208E-08"
+        ixz="3.81081288544873E-08"
+        iyy="7.56836702513835E-05"
+        iyz="5.27088009892671E-05"
+        izz="0.000157942403511433" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0 -0.0461 0.175"
+      rpy="-1.5708 0.0014224 -3.1416" />
+    <parent
+      link="right_arm_link3" />
+    <child
+      link="right_arm_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link5">
+    <inertial>
+      <origin
+        xyz="2.89274115772287E-09 -0.00147229926939896 0.0728049117262878"
+        rpy="0 0 0" />
+      <mass
+        value="0.200801025679017" />
+      <inertia
+        ixx="0.000299450844075757"
+        ixy="-4.64767942618736E-11"
+        ixz="6.6798032849908E-12"
+        iyy="0.00026947983395384"
+        iyz="5.81153690415166E-07"
+        izz="0.000121416445800259" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0 -0.126000000000001 -0.0461000000000018"
+      rpy="-1.57079632679489 -0.00349618935497161 -3.14159265358958" />
+    <parent
+      link="right_arm_link4" />
+    <child
+      link="right_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.0124848532591197 0.00690133646225344 0.0285465519664514"
+        rpy="0 0 0" />
+      <mass
+        value="0.0940462589496799" />
+      <inertia
+        ixx="6.05164189086139E-05"
+        ixy="-6.31572335379386E-07"
+        ixz="-1.26482556330156E-09"
+        iyy="6.60362060269192E-05"
+        iyz="-8.00675211337939E-07"
+        izz="6.74459784286085E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.752941176470588 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0 -0.035 0.158"
+      rpy="1.5708 -1.5708 3.1416" />
+    <parent
+      link="right_arm_link5" />
+    <child
+      link="right_arm_link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm_link7">
+    <inertial>
+      <origin
+        xyz="0.0387318021266272 9.93862991904848E-10 0.0186729914290569"
+        rpy="0 0 0" />
+      <mass
+        value="0.0388470606970297" />
+      <inertia
+        ixx="3.84415401429286E-05"
+        ixy="1.13898265700283E-11"
+        ixz="1.57377386004549E-05"
+        iyy="5.58653801708281E-05"
+        iyz="1.29389968626878E-11"
+        izz="4.79748038127971E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="0 0.0345 0.035"
+      rpy="1.5708 -0.0025299 0" />
+    <parent
+      link="right_arm_link6" />
+    <child
+      link="right_arm_link7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_hand_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.920741291190911 -1.18645251922474 -1.08902145907687"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_hand_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://miracle/meshes/right_hand_mount_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_hand_mount_joint"
+    type="fixed">
+    <origin
+      xyz="0.05 0 0.0335"
+      rpy="0 1.5708 0" />
+    <parent
+      link="right_arm_link7" />
+    <child
+      link="right_hand_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
